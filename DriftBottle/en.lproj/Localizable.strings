@@ -1,0 +1,27 @@
+/* 
+  Localizable.strings
+  DriftBottle
+
+  Created by admin on 15-2-27.
+  Copyright (c) 2015年 admin. All rights reserved.
+*/
+"fish" = "Fish";
+"send" = "Send";
+"myBottle" = "MyBottle";
+"friends" = "Friends";
+
+"fishFish" = "Fish";
+"fishBottle" = "FishBottle";
+
+"normalBottle" = "NormalBottle";
+"wishBottle" = "WishBottle";
+"questionBottle" = "QuestionBottle";
+"addAccessory" = "AddAccessory";
+"cancel" = "Cancel";
+"send" = "Send";
+
+"received" = "Received";
+"posted" = "Posted";
+"this bottle was from:" = "This bottle was from:";
+"reply" = "Reply";
+"info" = "Info";

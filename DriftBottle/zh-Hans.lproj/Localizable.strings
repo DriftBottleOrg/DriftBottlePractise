@@ -1,0 +1,27 @@
+/* 
+  Localizable.strings
+  DriftBottle
+
+  Created by admin on 15-2-27.
+  Copyright (c) 2015年 admin. All rights reserved.
+*/
+"fish" = "我捞";
+"send" = "我扔";
+"myBottle" = "我的瓶子";
+"friends" = "好友";
+
+"fishFish" = "捞一捞";
+"fishBottle" = "捞瓶子";
+
+"normalBottle" = "普通瓶";
+"wishBottle" = "心愿瓶";
+"questionBottle" = "提问瓶";
+"addAccessory" = "添加附件";
+"cancel" = "取消";
+"send" = "发送";
+
+"received" = "接收";
+"posted" = "发送";
+"this bottle was from:" = "这个瓶子来自:";
+"reply" = "回复";
+"info" = "详细信息";

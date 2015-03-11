@@ -1,0 +1,135 @@
+
+/* Class = "UIButton"; normalTitle = "发送"; ObjectID = "0Jm-rV-fMT"; */
+"0Jm-rV-fMT.normalTitle" = "发送";
+
+/* Class = "UILabel"; text = "张三"; ObjectID = "26d-AG-Y7h"; */
+"26d-AG-Y7h.text" = "张三";
+
+/* Class = "UITabBarItem"; title = "我捞"; ObjectID = "3Ae-9u-M9V"; */
+"3Ae-9u-M9V.title" = "我捞";
+
+/* Class = "UITabBarItem"; title = "好友"; ObjectID = "831-P6-UVY"; */
+"831-P6-UVY.title" = "好友";
+
+/* Class = "UIButton"; normalTitle = "Posted"; ObjectID = "8K7-qK-URa"; */
+"8K7-qK-URa.normalTitle" = "Posted";
+
+/* Class = "UIButton"; normalTitle = "Register"; ObjectID = "A1w-xq-lzt"; */
+"A1w-xq-lzt.normalTitle" = "Register";
+
+/* Class = "UITextField"; placeholder = "Entry your passWord"; ObjectID = "B41-7d-WBl"; */
+"B41-7d-WBl.placeholder" = "Entry your passWord";
+
+/* Class = "UITextField"; placeholder = "Entry password again"; ObjectID = "BZk-PT-2bn"; */
+"BZk-PT-2bn.placeholder" = "Entry password again";
+
+/* Class = "UILabel"; text = "UserName:"; ObjectID = "CKH-Ec-OQ5"; */
+"CKH-Ec-OQ5.text" = "UserName:";
+
+/* Class = "UIButton"; normalTitle = "添加附件"; ObjectID = "D4c-SR-heB"; */
+"D4c-SR-heB.normalTitle" = "添加附件";
+
+/* Class = "UINavigationItem"; title = "我的瓶子"; ObjectID = "DpB-Xc-e4k"; */
+"DpB-Xc-e4k.title" = "我的瓶子";
+
+/* Class = "UILabel"; text = "Email："; ObjectID = "EaO-jN-jxv"; */
+"EaO-jN-jxv.text" = "Email：";
+
+/* Class = "UILabel"; text = "捞瓶子"; ObjectID = "F4d-Og-VkX"; */
+"F4d-Og-VkX.text" = "捞瓶子";
+
+/* Class = "UIButton"; normalTitle = "Edit"; ObjectID = "FQ2-TN-hmZ"; */
+"FQ2-TN-hmZ.normalTitle" = "Edit";
+
+/* Class = "UINavigationItem"; title = "AddFriend"; ObjectID = "Ffr-3y-CMf"; */
+"Ffr-3y-CMf.title" = "AddFriend";
+
+/* Class = "UIButton"; normalTitle = "回复"; ObjectID = "Fhi-Y0-DNh"; */
+"Fhi-Y0-DNh.normalTitle" = "回复";
+
+/* Class = "UIButton"; normalTitle = "取消"; ObjectID = "JAA-pz-6gl"; */
+"JAA-pz-6gl.normalTitle" = "取消";
+
+/* Class = "UIButton"; normalTitle = "保存"; ObjectID = "JO1-od-bYH"; */
+"JO1-od-bYH.normalTitle" = "保存";
+
+/* Class = "UITextField"; placeholder = "Entry your userName"; ObjectID = "KfH-fe-U5M"; */
+"KfH-fe-U5M.placeholder" = "Entry your userName";
+
+/* Class = "UITabBarItem"; title = "我的瓶子"; ObjectID = "LOR-LL-J79"; */
+"LOR-LL-J79.title" = "我的瓶子";
+
+/* Class = "UIButton"; normalTitle = "取消"; ObjectID = "OHm-ew-MvE"; */
+"OHm-ew-MvE.normalTitle" = "取消";
+
+/* Class = "UIButton"; normalTitle = "Received"; ObjectID = "QPx-FC-pGU"; */
+"QPx-FC-pGU.normalTitle" = "Received";
+
+/* Class = "UIBarButtonItem"; title = "back1"; ObjectID = "Qjv-B5-Ibp"; */
+"Qjv-B5-Ibp.title" = "back1";
+
+/* Class = "UIButton"; normalTitle = "保存"; ObjectID = "SeC-Ye-R5i"; */
+"SeC-Ye-R5i.normalTitle" = "保存";
+
+/* Class = "UITextField"; placeholder = "Pick a userName"; ObjectID = "TJ3-d8-gz3"; */
+"TJ3-d8-gz3.placeholder" = "Pick a userName";
+
+/* Class = "UIButton"; normalTitle = "上传"; ObjectID = "Uan-gB-58P"; */
+"Uan-gB-58P.normalTitle" = "上传";
+
+/* Class = "UIButton"; normalTitle = "普通瓶"; ObjectID = "VYz-HD-AKn"; */
+"VYz-HD-AKn.normalTitle" = "普通瓶";
+
+/* Class = "UIButton"; normalTitle = "提问瓶"; ObjectID = "XTZ-YG-4iz"; */
+"XTZ-YG-4iz.normalTitle" = "提问瓶";
+
+/* Class = "UILabel"; text = "好友"; ObjectID = "Xo7-yS-AGE"; */
+"Xo7-yS-AGE.text" = "好友";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "aD1-wO-NrB"; */
+"aD1-wO-NrB.text" = "Label";
+
+/* Class = "UITabBarItem"; title = "我扔"; ObjectID = "agc-Xs-E8O"; */
+"agc-Xs-E8O.title" = "我扔";
+
+/* Class = "UILabel"; text = "Password:"; ObjectID = "cdC-Tq-VUA"; */
+"cdC-Tq-VUA.text" = "Password:";
+
+/* Class = "UILabel"; text = "QQ："; ObjectID = "epv-Wf-7iQ"; */
+"epv-Wf-7iQ.text" = "QQ：";
+
+/* Class = "UILabel"; text = "PassWord:"; ObjectID = "iEd-30-Cbl"; */
+"iEd-30-Cbl.text" = "PassWord:";
+
+/* Class = "UIButton"; normalTitle = "Login"; ObjectID = "ip0-xz-ZDJ"; */
+"ip0-xz-ZDJ.normalTitle" = "Login";
+
+/* Class = "UIButton"; normalTitle = "取消"; ObjectID = "jk7-49-BtR"; */
+"jk7-49-BtR.normalTitle" = "取消";
+
+/* Class = "UILabel"; text = "Username:"; ObjectID = "jwC-Nt-pYi"; */
+"jwC-Nt-pYi.text" = "Username:";
+
+/* Class = "UILabel"; text = "Phone："; ObjectID = "md6-p2-Ye8"; */
+"md6-p2-Ye8.text" = "Phone：";
+
+/* Class = "UILabel"; text = "PassWord:"; ObjectID = "nhz-Qq-n4J"; */
+"nhz-Qq-n4J.text" = "PassWord:";
+
+/* Class = "UIButton"; normalTitle = "捞一捞"; ObjectID = "p8X-7a-bZ6"; */
+"p8X-7a-bZ6.normalTitle" = "捞一捞";
+
+/* Class = "UILabel"; text = "昵称："; ObjectID = "qGT-YE-Bkj"; */
+"qGT-YE-Bkj.text" = "昵称：";
+
+/* Class = "UIButton"; normalTitle = "Register"; ObjectID = "sdw-C1-Q6N"; */
+"sdw-C1-Q6N.normalTitle" = "Register";
+
+/* Class = "UIButton"; normalTitle = "心愿瓶"; ObjectID = "wQV-HG-qUB"; */
+"wQV-HG-qUB.normalTitle" = "心愿瓶";
+
+/* Class = "UILabel"; text = "这是我的备注"; ObjectID = "wvC-nK-Fo9"; */
+"wvC-nK-Fo9.text" = "这是我的备注";
+
+/* Class = "UITextField"; placeholder = "Pick a password"; ObjectID = "yJg-cU-hfC"; */
+"yJg-cU-hfC.placeholder" = "Pick a password";

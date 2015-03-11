@@ -1,0 +1,725 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0919F0751A692BB00080E31C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0919F0731A692BB00080E31C /* Main.storyboard */; };
+		0919F0791A692DA20080E31C /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 0919F0781A692DA20080E31C /* Reachability.m */; };
+		0919F07B1A692E010080E31C /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0919F07A1A692E010080E31C /* SystemConfiguration.framework */; };
+		0919F07D1A693AC30080E31C /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0919F07C1A693AC30080E31C /* CFNetwork.framework */; };
+		0919F07F1A693AD10080E31C /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0919F07E1A693AD10080E31C /* libz.dylib */; };
+		0919F0811A693ADE0080E31C /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0919F0801A693ADE0080E31C /* libxml2.dylib */; };
+		0919F0A01A693C840080E31C /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0919F09F1A693C840080E31C /* MobileCoreServices.framework */; };
+		840C65081AA864B500DED15C /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 840C65071AA864B500DED15C /* libsqlite3.dylib */; };
+		840EFD641AA0828A003003DF /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 840EFD661AA0828A003003DF /* Localizable.strings */; };
+		840EFD6D1AA08E90003003DF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 840EFD6F1AA08E90003003DF /* InfoPlist.strings */; };
+		840FFAC11AA98BFB00B20DF1 /* CoreDataManagement.m in Sources */ = {isa = PBXBuildFile; fileRef = 840FFAC01AA98BFB00B20DF1 /* CoreDataManagement.m */; };
+		840FFAC31AA9BD1100B20DF1 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 840FFAC21AA9BD1100B20DF1 /* CoreData.framework */; };
+		8419A2351AA5801300595331 /* fishGif.gif in Resources */ = {isa = PBXBuildFile; fileRef = 8419A2341AA5801300595331 /* fishGif.gif */; };
+		846064691A3F0DF2008F375E /* FishViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 846064681A3F0DF2008F375E /* FishViewController.m */; };
+		8460646D1A3F0E18008F375E /* ThrowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8460646C1A3F0E18008F375E /* ThrowViewController.m */; };
+		846064711A3F0E37008F375E /* MyBottleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 846064701A3F0E37008F375E /* MyBottleViewController.m */; };
+		846064751A3F0E4F008F375E /* FriendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 846064741A3F0E4F008F375E /* FriendsViewController.m */; };
+		84612C571AAC480A00F275FA /* MMM.m in Sources */ = {isa = PBXBuildFile; fileRef = 84612C561AAC480A00F275FA /* MMM.m */; };
+		84AA62741A70E15E009A2D0D /* BottleInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84AA62731A70E15E009A2D0D /* BottleInfoViewController.m */; };
+		84B064BE1A72A8600013DC47 /* fishSucceedGif.gif in Resources */ = {isa = PBXBuildFile; fileRef = 84B064BD1A72A85F0013DC47 /* fishSucceedGif.gif */; };
+		84B7224F1A3D54A2008769BE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B7224E1A3D54A2008769BE /* main.m */; };
+		84B722521A3D54A2008769BE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B722511A3D54A2008769BE /* AppDelegate.m */; };
+		84B722551A3D54A2008769BE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B722541A3D54A2008769BE /* ViewController.m */; };
+		84B7225A1A3D54A2008769BE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84B722591A3D54A2008769BE /* Images.xcassets */; };
+		84B7225D1A3D54A3008769BE /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84B7225B1A3D54A3008769BE /* LaunchScreen.xib */; };
+		84B722691A3D54A3008769BE /* DriftBottleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B722681A3D54A3008769BE /* DriftBottleTests.m */; };
+		84B9D6E91A41A68F00798E97 /* TabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B9D6E81A41A68F00798E97 /* TabBarViewController.m */; };
+		84B9D6ED1A41AC2900798E97 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B9D6EC1A41AC2900798E97 /* LoginViewController.m */; };
+		84BA61C11A3F2BCE00AE0AFC /* EditSelfViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84BA61C01A3F2BCE00AE0AFC /* EditSelfViewController.m */; };
+		84C19E831A728EEF00488AF6 /* NSUserDefaultsDao.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C19E821A728EEF00488AF6 /* NSUserDefaultsDao.m */; };
+		84C19E851A72A1F000488AF6 /* fishFailGif.gif in Resources */ = {isa = PBXBuildFile; fileRef = 84C19E841A72A1F000488AF6 /* fishFailGif.gif */; };
+		84C2C3461A4BFDFB00613BF3 /* NormalBottleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C2C3451A4BFDFB00613BF3 /* NormalBottleViewController.m */; };
+		84C322C71A44189900454A0F /* AddFriendUIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C322C61A44189900454A0F /* AddFriendUIViewController.m */; };
+		84CB38A81A429E8E0041F7B8 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CB38A71A429E8E0041F7B8 /* RegisterViewController.m */; };
+		84DA0BA91AA9C3BE00E51843 /* TestModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 84DA0BA71AA9C3BE00E51843 /* TestModel.xcdatamodeld */; };
+		84DA0BAC1AA9C3EF00E51843 /* Test2.m in Sources */ = {isa = PBXBuildFile; fileRef = 84DA0BAB1AA9C3EF00E51843 /* Test2.m */; };
+		84DA0BB21AA9E9A800E51843 /* Friends.m in Sources */ = {isa = PBXBuildFile; fileRef = 84DA0BB11AA9E9A800E51843 /* Friends.m */; };
+		84DA0BB51AA9E9A800E51843 /* Accessory.m in Sources */ = {isa = PBXBuildFile; fileRef = 84DA0BB41AA9E9A800E51843 /* Accessory.m */; };
+		84DA0BBE1AA9E9A800E51843 /* Bottle.m in Sources */ = {isa = PBXBuildFile; fileRef = 84DA0BBD1AA9E9A800E51843 /* Bottle.m */; };
+		84DA0BCD1AA9F53000E51843 /* UserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 84DA0BCC1AA9F53000E51843 /* UserInfo.m */; };
+		84DA0BD31AA9F5F100E51843 /* Message.m in Sources */ = {isa = PBXBuildFile; fileRef = 84DA0BD21AA9F5F100E51843 /* Message.m */; };
+		84DA0BD61AA9FD9200E51843 /* LogInformation.m in Sources */ = {isa = PBXBuildFile; fileRef = 84DA0BD51AA9FD9200E51843 /* LogInformation.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		84B722631A3D54A3008769BE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 84B722411A3D54A2008769BE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 84B722481A3D54A2008769BE;
+			remoteInfo = DriftBottle;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0919F0741A692BB00080E31C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		0919F0771A692DA20080E31C /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		0919F0781A692DA20080E31C /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		0919F07A1A692E010080E31C /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		0919F07C1A693AC30080E31C /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		0919F07E1A693AD10080E31C /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		0919F0801A693ADE0080E31C /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
+		0919F09F1A693C840080E31C /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		840C65071AA864B500DED15C /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		840EFD621AA08271003003DF /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
+		840EFD631AA08271003003DF /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		840EFD651AA0828A003003DF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		840EFD671AA0828D003003DF /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		840EFD6E1AA08E90003003DF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		840EFD701AA08E92003003DF /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		840FFABF1AA98BFB00B20DF1 /* CoreDataManagement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataManagement.h; sourceTree = "<group>"; };
+		840FFAC01AA98BFB00B20DF1 /* CoreDataManagement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataManagement.m; sourceTree = "<group>"; };
+		840FFAC21AA9BD1100B20DF1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		8419A2341AA5801300595331 /* fishGif.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = fishGif.gif; sourceTree = "<group>"; };
+		846064671A3F0DF2008F375E /* FishViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FishViewController.h; sourceTree = "<group>"; };
+		846064681A3F0DF2008F375E /* FishViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FishViewController.m; sourceTree = "<group>"; };
+		8460646B1A3F0E18008F375E /* ThrowViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThrowViewController.h; sourceTree = "<group>"; };
+		8460646C1A3F0E18008F375E /* ThrowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThrowViewController.m; sourceTree = "<group>"; };
+		8460646F1A3F0E37008F375E /* MyBottleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyBottleViewController.h; sourceTree = "<group>"; };
+		846064701A3F0E37008F375E /* MyBottleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyBottleViewController.m; sourceTree = "<group>"; };
+		846064731A3F0E4F008F375E /* FriendsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendsViewController.h; sourceTree = "<group>"; };
+		846064741A3F0E4F008F375E /* FriendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendsViewController.m; sourceTree = "<group>"; };
+		84612C551AAC480A00F275FA /* MMM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MMM.h; path = ../MMM.h; sourceTree = "<group>"; };
+		84612C561AAC480A00F275FA /* MMM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MMM.m; path = ../MMM.m; sourceTree = "<group>"; };
+		84AA62721A70E15E009A2D0D /* BottleInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BottleInfoViewController.h; sourceTree = "<group>"; };
+		84AA62731A70E15E009A2D0D /* BottleInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BottleInfoViewController.m; sourceTree = "<group>"; };
+		84B064BD1A72A85F0013DC47 /* fishSucceedGif.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = fishSucceedGif.gif; sourceTree = "<group>"; };
+		84B722491A3D54A2008769BE /* DriftBottle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DriftBottle.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		84B7224D1A3D54A2008769BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84B7224E1A3D54A2008769BE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		84B722501A3D54A2008769BE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		84B722511A3D54A2008769BE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		84B722531A3D54A2008769BE /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		84B722541A3D54A2008769BE /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		84B722591A3D54A2008769BE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		84B7225C1A3D54A3008769BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		84B722621A3D54A3008769BE /* DriftBottleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DriftBottleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		84B722671A3D54A3008769BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84B722681A3D54A3008769BE /* DriftBottleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DriftBottleTests.m; sourceTree = "<group>"; };
+		84B9D6E71A41A68F00798E97 /* TabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBarViewController.h; sourceTree = "<group>"; };
+		84B9D6E81A41A68F00798E97 /* TabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarViewController.m; sourceTree = "<group>"; };
+		84B9D6EB1A41AC2900798E97 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		84B9D6EC1A41AC2900798E97 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		84BA61BF1A3F2BCE00AE0AFC /* EditSelfViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditSelfViewController.h; sourceTree = "<group>"; };
+		84BA61C01A3F2BCE00AE0AFC /* EditSelfViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditSelfViewController.m; sourceTree = "<group>"; };
+		84C19E811A728EEF00488AF6 /* NSUserDefaultsDao.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSUserDefaultsDao.h; sourceTree = "<group>"; };
+		84C19E821A728EEF00488AF6 /* NSUserDefaultsDao.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSUserDefaultsDao.m; sourceTree = "<group>"; };
+		84C19E841A72A1F000488AF6 /* fishFailGif.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = fishFailGif.gif; sourceTree = "<group>"; };
+		84C2C3441A4BFDFB00613BF3 /* NormalBottleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NormalBottleViewController.h; sourceTree = "<group>"; };
+		84C2C3451A4BFDFB00613BF3 /* NormalBottleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NormalBottleViewController.m; sourceTree = "<group>"; };
+		84C322C51A44189900454A0F /* AddFriendUIViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddFriendUIViewController.h; sourceTree = "<group>"; };
+		84C322C61A44189900454A0F /* AddFriendUIViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddFriendUIViewController.m; sourceTree = "<group>"; };
+		84CB38A61A429E8E0041F7B8 /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
+		84CB38A71A429E8E0041F7B8 /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
+		84DA0BA81AA9C3BE00E51843 /* TestModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TestModel.xcdatamodel; sourceTree = "<group>"; };
+		84DA0BAA1AA9C3EF00E51843 /* Test2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Test2.h; sourceTree = "<group>"; };
+		84DA0BAB1AA9C3EF00E51843 /* Test2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Test2.m; sourceTree = "<group>"; };
+		84DA0BB01AA9E9A800E51843 /* Friends.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Friends.h; sourceTree = "<group>"; };
+		84DA0BB11AA9E9A800E51843 /* Friends.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Friends.m; sourceTree = "<group>"; };
+		84DA0BB31AA9E9A800E51843 /* Accessory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Accessory.h; sourceTree = "<group>"; };
+		84DA0BB41AA9E9A800E51843 /* Accessory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Accessory.m; sourceTree = "<group>"; };
+		84DA0BBC1AA9E9A800E51843 /* Bottle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bottle.h; sourceTree = "<group>"; };
+		84DA0BBD1AA9E9A800E51843 /* Bottle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bottle.m; sourceTree = "<group>"; };
+		84DA0BCB1AA9F53000E51843 /* UserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfo.h; sourceTree = "<group>"; };
+		84DA0BCC1AA9F53000E51843 /* UserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfo.m; sourceTree = "<group>"; };
+		84DA0BD11AA9F5F100E51843 /* Message.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Message.h; sourceTree = "<group>"; };
+		84DA0BD21AA9F5F100E51843 /* Message.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Message.m; sourceTree = "<group>"; };
+		84DA0BD41AA9FD9200E51843 /* LogInformation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogInformation.h; sourceTree = "<group>"; };
+		84DA0BD51AA9FD9200E51843 /* LogInformation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogInformation.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		84B722461A3D54A2008769BE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				840FFAC31AA9BD1100B20DF1 /* CoreData.framework in Frameworks */,
+				840C65081AA864B500DED15C /* libsqlite3.dylib in Frameworks */,
+				0919F0A01A693C840080E31C /* MobileCoreServices.framework in Frameworks */,
+				0919F0811A693ADE0080E31C /* libxml2.dylib in Frameworks */,
+				0919F07F1A693AD10080E31C /* libz.dylib in Frameworks */,
+				0919F07D1A693AC30080E31C /* CFNetwork.framework in Frameworks */,
+				0919F07B1A692E010080E31C /* SystemConfiguration.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84B7225F1A3D54A3008769BE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0919F0761A692D620080E31C /* NetHelper */ = {
+			isa = PBXGroup;
+			children = (
+				0919F0771A692DA20080E31C /* Reachability.h */,
+				0919F0781A692DA20080E31C /* Reachability.m */,
+			);
+			name = NetHelper;
+			sourceTree = "<group>";
+		};
+		840FFABB1AA9892500B20DF1 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				840FFABF1AA98BFB00B20DF1 /* CoreDataManagement.h */,
+				840FFAC01AA98BFB00B20DF1 /* CoreDataManagement.m */,
+				84DA0BA71AA9C3BE00E51843 /* TestModel.xcdatamodeld */,
+			);
+			name = CoreData;
+			sourceTree = "<group>";
+		};
+		846064661A3F0DAF008F375E /* 我捞 */ = {
+			isa = PBXGroup;
+			children = (
+				846064671A3F0DF2008F375E /* FishViewController.h */,
+				846064681A3F0DF2008F375E /* FishViewController.m */,
+			);
+			name = "我捞";
+			sourceTree = "<group>";
+		};
+		8460646A1A3F0DFA008F375E /* 我扔 */ = {
+			isa = PBXGroup;
+			children = (
+				8460646B1A3F0E18008F375E /* ThrowViewController.h */,
+				8460646C1A3F0E18008F375E /* ThrowViewController.m */,
+				84C2C3441A4BFDFB00613BF3 /* NormalBottleViewController.h */,
+				84C2C3451A4BFDFB00613BF3 /* NormalBottleViewController.m */,
+			);
+			name = "我扔";
+			sourceTree = "<group>";
+		};
+		8460646E1A3F0E1F008F375E /* 我的瓶子 */ = {
+			isa = PBXGroup;
+			children = (
+				8460646F1A3F0E37008F375E /* MyBottleViewController.h */,
+				846064701A3F0E37008F375E /* MyBottleViewController.m */,
+				84AA62721A70E15E009A2D0D /* BottleInfoViewController.h */,
+				84AA62731A70E15E009A2D0D /* BottleInfoViewController.m */,
+			);
+			name = "我的瓶子";
+			sourceTree = "<group>";
+		};
+		846064721A3F0E3D008F375E /* 好友 */ = {
+			isa = PBXGroup;
+			children = (
+				846064731A3F0E4F008F375E /* FriendsViewController.h */,
+				846064741A3F0E4F008F375E /* FriendsViewController.m */,
+				84BA61BF1A3F2BCE00AE0AFC /* EditSelfViewController.h */,
+				84BA61C01A3F2BCE00AE0AFC /* EditSelfViewController.m */,
+				84C322C51A44189900454A0F /* AddFriendUIViewController.h */,
+				84C322C61A44189900454A0F /* AddFriendUIViewController.m */,
+			);
+			name = "好友";
+			sourceTree = "<group>";
+		};
+		84B722401A3D54A2008769BE = {
+			isa = PBXGroup;
+			children = (
+				840FFAC21AA9BD1100B20DF1 /* CoreData.framework */,
+				840C65071AA864B500DED15C /* libsqlite3.dylib */,
+				0919F09F1A693C840080E31C /* MobileCoreServices.framework */,
+				0919F0801A693ADE0080E31C /* libxml2.dylib */,
+				0919F07E1A693AD10080E31C /* libz.dylib */,
+				0919F07C1A693AC30080E31C /* CFNetwork.framework */,
+				0919F07A1A692E010080E31C /* SystemConfiguration.framework */,
+				84B7224B1A3D54A2008769BE /* DriftBottle */,
+				84B722651A3D54A3008769BE /* DriftBottleTests */,
+				84B7224A1A3D54A2008769BE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		84B7224A1A3D54A2008769BE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				84B722491A3D54A2008769BE /* DriftBottle.app */,
+				84B722621A3D54A3008769BE /* DriftBottleTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		84B7224B1A3D54A2008769BE /* DriftBottle */ = {
+			isa = PBXGroup;
+			children = (
+				840FFABB1AA9892500B20DF1 /* CoreData */,
+				84C19E801A728E9600488AF6 /* NSUserDefaults */,
+				0919F0761A692D620080E31C /* NetHelper */,
+				84CB38A21A4299B00041F7B8 /* Entities */,
+				84B9D6EA1A41AC0000798E97 /* 登录和注册 */,
+				846064721A3F0E3D008F375E /* 好友 */,
+				8460646E1A3F0E1F008F375E /* 我的瓶子 */,
+				8460646A1A3F0DFA008F375E /* 我扔 */,
+				846064661A3F0DAF008F375E /* 我捞 */,
+				84B722501A3D54A2008769BE /* AppDelegate.h */,
+				0919F0731A692BB00080E31C /* Main.storyboard */,
+				84B722511A3D54A2008769BE /* AppDelegate.m */,
+				84B722531A3D54A2008769BE /* ViewController.h */,
+				84B722541A3D54A2008769BE /* ViewController.m */,
+				84B722591A3D54A2008769BE /* Images.xcassets */,
+				84B7225B1A3D54A3008769BE /* LaunchScreen.xib */,
+				84B9D6E71A41A68F00798E97 /* TabBarViewController.h */,
+				84B9D6E81A41A68F00798E97 /* TabBarViewController.m */,
+				84B7224C1A3D54A2008769BE /* Supporting Files */,
+			);
+			path = DriftBottle;
+			sourceTree = "<group>";
+		};
+		84B7224C1A3D54A2008769BE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8419A2341AA5801300595331 /* fishGif.gif */,
+				84C19E841A72A1F000488AF6 /* fishFailGif.gif */,
+				84B064BD1A72A85F0013DC47 /* fishSucceedGif.gif */,
+				84B7224D1A3D54A2008769BE /* Info.plist */,
+				84B7224E1A3D54A2008769BE /* main.m */,
+				840EFD661AA0828A003003DF /* Localizable.strings */,
+				840EFD6F1AA08E90003003DF /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		84B722651A3D54A3008769BE /* DriftBottleTests */ = {
+			isa = PBXGroup;
+			children = (
+				84B722681A3D54A3008769BE /* DriftBottleTests.m */,
+				84B722661A3D54A3008769BE /* Supporting Files */,
+			);
+			path = DriftBottleTests;
+			sourceTree = "<group>";
+		};
+		84B722661A3D54A3008769BE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				84B722671A3D54A3008769BE /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		84B9D6EA1A41AC0000798E97 /* 登录和注册 */ = {
+			isa = PBXGroup;
+			children = (
+				84B9D6EB1A41AC2900798E97 /* LoginViewController.h */,
+				84B9D6EC1A41AC2900798E97 /* LoginViewController.m */,
+				84CB38A61A429E8E0041F7B8 /* RegisterViewController.h */,
+				84CB38A71A429E8E0041F7B8 /* RegisterViewController.m */,
+			);
+			name = "登录和注册";
+			sourceTree = "<group>";
+		};
+		84C19E801A728E9600488AF6 /* NSUserDefaults */ = {
+			isa = PBXGroup;
+			children = (
+				84C19E811A728EEF00488AF6 /* NSUserDefaultsDao.h */,
+				84C19E821A728EEF00488AF6 /* NSUserDefaultsDao.m */,
+			);
+			name = NSUserDefaults;
+			sourceTree = "<group>";
+		};
+		84CB38A21A4299B00041F7B8 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				84612C551AAC480A00F275FA /* MMM.h */,
+				84612C561AAC480A00F275FA /* MMM.m */,
+				84DA0BD11AA9F5F100E51843 /* Message.h */,
+				84DA0BD21AA9F5F100E51843 /* Message.m */,
+				84DA0BBC1AA9E9A800E51843 /* Bottle.h */,
+				84DA0BBD1AA9E9A800E51843 /* Bottle.m */,
+				84DA0BB31AA9E9A800E51843 /* Accessory.h */,
+				84DA0BB41AA9E9A800E51843 /* Accessory.m */,
+				84DA0BB01AA9E9A800E51843 /* Friends.h */,
+				84DA0BB11AA9E9A800E51843 /* Friends.m */,
+				84DA0BAA1AA9C3EF00E51843 /* Test2.h */,
+				84DA0BAB1AA9C3EF00E51843 /* Test2.m */,
+				84DA0BCB1AA9F53000E51843 /* UserInfo.h */,
+				84DA0BCC1AA9F53000E51843 /* UserInfo.m */,
+				84DA0BD41AA9FD9200E51843 /* LogInformation.h */,
+				84DA0BD51AA9FD9200E51843 /* LogInformation.m */,
+			);
+			name = Entities;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		84B722481A3D54A2008769BE /* DriftBottle */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84B7226C1A3D54A3008769BE /* Build configuration list for PBXNativeTarget "DriftBottle" */;
+			buildPhases = (
+				84B722451A3D54A2008769BE /* Sources */,
+				84B722461A3D54A2008769BE /* Frameworks */,
+				84B722471A3D54A2008769BE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DriftBottle;
+			productName = DriftBottle;
+			productReference = 84B722491A3D54A2008769BE /* DriftBottle.app */;
+			productType = "com.apple.product-type.application";
+		};
+		84B722611A3D54A3008769BE /* DriftBottleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84B7226F1A3D54A3008769BE /* Build configuration list for PBXNativeTarget "DriftBottleTests" */;
+			buildPhases = (
+				84B7225E1A3D54A3008769BE /* Sources */,
+				84B7225F1A3D54A3008769BE /* Frameworks */,
+				84B722601A3D54A3008769BE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				84B722641A3D54A3008769BE /* PBXTargetDependency */,
+			);
+			name = DriftBottleTests;
+			productName = DriftBottleTests;
+			productReference = 84B722621A3D54A3008769BE /* DriftBottleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		84B722411A3D54A2008769BE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = admin;
+				TargetAttributes = {
+					84B722481A3D54A2008769BE = {
+						CreatedOnToolsVersion = 6.0.1;
+					};
+					84B722611A3D54A3008769BE = {
+						CreatedOnToolsVersion = 6.0.1;
+						TestTargetID = 84B722481A3D54A2008769BE;
+					};
+				};
+			};
+			buildConfigurationList = 84B722441A3D54A2008769BE /* Build configuration list for PBXProject "DriftBottle" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				"zh-Hans",
+			);
+			mainGroup = 84B722401A3D54A2008769BE;
+			productRefGroup = 84B7224A1A3D54A2008769BE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				84B722481A3D54A2008769BE /* DriftBottle */,
+				84B722611A3D54A3008769BE /* DriftBottleTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		84B722471A3D54A2008769BE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84B064BE1A72A8600013DC47 /* fishSucceedGif.gif in Resources */,
+				840EFD6D1AA08E90003003DF /* InfoPlist.strings in Resources */,
+				840EFD641AA0828A003003DF /* Localizable.strings in Resources */,
+				0919F0751A692BB00080E31C /* Main.storyboard in Resources */,
+				84B7225D1A3D54A3008769BE /* LaunchScreen.xib in Resources */,
+				84B7225A1A3D54A2008769BE /* Images.xcassets in Resources */,
+				8419A2351AA5801300595331 /* fishGif.gif in Resources */,
+				84C19E851A72A1F000488AF6 /* fishFailGif.gif in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84B722601A3D54A3008769BE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		84B722451A3D54A2008769BE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84B9D6E91A41A68F00798E97 /* TabBarViewController.m in Sources */,
+				84DA0BCD1AA9F53000E51843 /* UserInfo.m in Sources */,
+				84AA62741A70E15E009A2D0D /* BottleInfoViewController.m in Sources */,
+				84DA0BA91AA9C3BE00E51843 /* TestModel.xcdatamodeld in Sources */,
+				84C19E831A728EEF00488AF6 /* NSUserDefaultsDao.m in Sources */,
+				846064711A3F0E37008F375E /* MyBottleViewController.m in Sources */,
+				84DA0BB21AA9E9A800E51843 /* Friends.m in Sources */,
+				846064691A3F0DF2008F375E /* FishViewController.m in Sources */,
+				84C2C3461A4BFDFB00613BF3 /* NormalBottleViewController.m in Sources */,
+				84BA61C11A3F2BCE00AE0AFC /* EditSelfViewController.m in Sources */,
+				846064751A3F0E4F008F375E /* FriendsViewController.m in Sources */,
+				84DA0BAC1AA9C3EF00E51843 /* Test2.m in Sources */,
+				84DA0BB51AA9E9A800E51843 /* Accessory.m in Sources */,
+				84B722551A3D54A2008769BE /* ViewController.m in Sources */,
+				8460646D1A3F0E18008F375E /* ThrowViewController.m in Sources */,
+				0919F0791A692DA20080E31C /* Reachability.m in Sources */,
+				84CB38A81A429E8E0041F7B8 /* RegisterViewController.m in Sources */,
+				84C322C71A44189900454A0F /* AddFriendUIViewController.m in Sources */,
+				84B722521A3D54A2008769BE /* AppDelegate.m in Sources */,
+				84B9D6ED1A41AC2900798E97 /* LoginViewController.m in Sources */,
+				84B7224F1A3D54A2008769BE /* main.m in Sources */,
+				84DA0BBE1AA9E9A800E51843 /* Bottle.m in Sources */,
+				84DA0BD61AA9FD9200E51843 /* LogInformation.m in Sources */,
+				840FFAC11AA98BFB00B20DF1 /* CoreDataManagement.m in Sources */,
+				84DA0BD31AA9F5F100E51843 /* Message.m in Sources */,
+				84612C571AAC480A00F275FA /* MMM.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84B7225E1A3D54A3008769BE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84B722691A3D54A3008769BE /* DriftBottleTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		84B722641A3D54A3008769BE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 84B722481A3D54A2008769BE /* DriftBottle */;
+			targetProxy = 84B722631A3D54A3008769BE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		0919F0731A692BB00080E31C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0919F0741A692BB00080E31C /* Base */,
+				840EFD621AA08271003003DF /* zh-Hans */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		840EFD661AA0828A003003DF /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				840EFD651AA0828A003003DF /* en */,
+				840EFD671AA0828D003003DF /* zh-Hans */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		840EFD6F1AA08E90003003DF /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				840EFD6E1AA08E90003003DF /* en */,
+				840EFD701AA08E92003003DF /* zh-Hans */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		84B7225B1A3D54A3008769BE /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				84B7225C1A3D54A3008769BE /* Base */,
+				840EFD631AA08271003003DF /* zh-Hans */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		84B7226A1A3D54A3008769BE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		84B7226B1A3D54A3008769BE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		84B7226D1A3D54A3008769BE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = DriftBottle/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		84B7226E1A3D54A3008769BE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = DriftBottle/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		84B722701A3D54A3008769BE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = DriftBottleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DriftBottle.app/DriftBottle";
+			};
+			name = Debug;
+		};
+		84B722711A3D54A3008769BE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = DriftBottleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DriftBottle.app/DriftBottle";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		84B722441A3D54A2008769BE /* Build configuration list for PBXProject "DriftBottle" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84B7226A1A3D54A3008769BE /* Debug */,
+				84B7226B1A3D54A3008769BE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		84B7226C1A3D54A3008769BE /* Build configuration list for PBXNativeTarget "DriftBottle" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84B7226D1A3D54A3008769BE /* Debug */,
+				84B7226E1A3D54A3008769BE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		84B7226F1A3D54A3008769BE /* Build configuration list for PBXNativeTarget "DriftBottleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84B722701A3D54A3008769BE /* Debug */,
+				84B722711A3D54A3008769BE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		84DA0BA71AA9C3BE00E51843 /* TestModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				84DA0BA81AA9C3BE00E51843 /* TestModel.xcdatamodel */,
+			);
+			currentVersion = 84DA0BA81AA9C3BE00E51843 /* TestModel.xcdatamodel */;
+			path = TestModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 84B722411A3D54A2008769BE /* Project object */;
+}
