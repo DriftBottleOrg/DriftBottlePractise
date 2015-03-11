@@ -41,6 +41,8 @@
         [self.loginViewController.view setFrame:CGRectMake(0, 0, 100, 100)];
         [self addChildViewController:self.loginViewController];
     }
+    
+    
     NSLog(@"sd++%@",self.loginViewController.userName.text);
     
     
