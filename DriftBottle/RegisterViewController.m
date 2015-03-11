@@ -69,9 +69,7 @@
 
 
 - (IBAction)Register:(id)sender {
-    NSLog(@"asas %@",self.passWord);
-    NSLog(@"haha %@",self.passWordAgain);
-    NSLog(@"asas %d",[self.passWord isEqualToString:self.passWordAgain]);
+        NSLog(@"asas %d",[self.passWord isEqualToString:self.passWordAgain]);
     if([self.passWord isEqualToString:self.passWordAgain])
     {
         if(!self.logInformation){
