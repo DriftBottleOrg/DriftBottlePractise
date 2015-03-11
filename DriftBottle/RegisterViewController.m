@@ -9,6 +9,7 @@
 #import "RegisterViewController.h"
 #import "TabBarViewController.h"
 #import "LogInformation.h"
+#define URL_REGISTER @"http://192.168.0.108:8080/driftBottle/Friends/myresource/registUser"
 
 @interface RegisterViewController ()
 
@@ -16,9 +17,7 @@
 @property (strong, nonatomic) IBOutlet UITextField *passWordOutlet;
 @property (strong, nonatomic) IBOutlet UITextField *passWordAgainOutlet;
 
-@property (strong, nonatomic)NSString *userName;
-@property (strong, nonatomic)NSString *passWord;
-@property (strong, nonatomic)NSString *passWordAgain;
+
 
 //@property (strong, nonatomic)LogInformation *logInformation;
 @property (strong, nonatomic) LogInformation *logInformation;
@@ -29,29 +28,17 @@
 
 @implementation RegisterViewController
 
-
-- (NSString *)userName{
-    if(!_userName){
-        _userName = self.userNameOutlet.text;
+-(UserService *) userService{
+    if(!_userService){
+        _userService = [[UserService alloc] init];
     }
-    return _userName;
+    return _userService;
 }
 
-- (NSString *)passWord
-{
-    if(!_passWord){
-        _passWord = self.passWordOutlet.text;
-    }
-    return _passWord;
-}
 
-- (NSString *)passWordAgain
-{
-    if(!_passWordAgain){
-        _passWordAgain = self.passWordAgainOutlet.text;
-    }
-    return _passWordAgain;
-}
+
+
+
 
 - (TabBarViewController *)tabBarViewController
 {
@@ -69,30 +56,65 @@
 
 
 - (IBAction)Register:(id)sender {
-        NSLog(@"asas %d",[self.passWord isEqualToString:self.passWordAgain]);
-    if([self.passWord isEqualToString:self.passWordAgain])
+    NSString *userName = self.userNameOutlet.text;
+    NSString *passWord = self.passWordOutlet.text;
+    NSString *passWordAgain = self.passWordAgainOutlet.text;
+    
+    self.userService.delegate = self;
+    if([passWord isEqualToString:passWordAgain])
     {
-        if(!self.logInformation){
-            self.logInformation = [[LogInformation alloc] init];
-            self.logInformation.userName = self.userName;
-            self.logInformation.passWord = self.passWord;
+        if([self.userService verifyName:userName andPassword:passWord])
+        {
+            NSURL *url = [NSURL URLWithString:URL_REGISTER];
+            __weak  ASIFormDataRequest *request = [ASIFormDataRequest requestWithURL:url];
             
-            //存储用户的用户名和密码
-            [self storeUserNameAndPassWord:self.logInformation];
+            [request setPostValue:userName forKey:@"userName"];
+            [request setPostValue:passWord forKey:@"passwd"];
             
-            //跳转到主界面————捞瓶子的界面
-            [self goToTabBarViewController];
+            [request setRequestMethod:@"POST"];
+            [request setTimeOutSeconds:20];
+            
+            request.delegate = self;
+            request.tag = 100;
+            @try {
+                [request startAsynchronous];
+            }
+            @catch (NSException *exception) {
+                [self showAlertWithTitle:@"提示" Message:@"注册失败，请稍后再试" CancelButton:nil OtherButton:@"OK",nil];
+            }
+            
+            
+            [request setCompletionBlock:^{
+                NSString *responseStr = [request responseString];
+                NSLog(@"%@",responseStr);// return UserId
+                [self goToTabBarViewController];
+            }];
+            
+            [request setFailedBlock:^{
+                [self showAlertWithTitle:@"提示" Message:@"注册失败，请稍后再试" CancelButton:nil OtherButton:@"OK",nil];
+                NSError *error = [request error];
+                NSLog(@"%@",[error localizedDescription]);
+                return;
+            }];
+            //当服务器内部错误的时候，应该怎么提示。
+//            NSError *err = [request error];
+//            if(!err)
+//            {
+//                 [self showAlertWithTitle:@"提示" Message:@"注册失败，请稍后再试" CancelButton:nil OtherButton:@"OK",nil];
+//                return;
+//            }
+            
+                //跳转到主界面————捞瓶子的界面
+               //
+            
         }
-    }else{
-        
+    
+    }
+    else
+    {
+       
         //如果输入两次密码不等，弹出提示框
-        UIAlertView *alerView = [[UIAlertView alloc] initWithTitle:nil
-                                                           message:@"输入的用户名或密码有误"
-                                                          delegate:self
-                                                 cancelButtonTitle:@"Cancel"
-                                                 otherButtonTitles:@"OK", nil];
-        [alerView show];
-
+        [self showAlertWithTitle:nil Message:@"两次输入密码不相同" CancelButton:nil OtherButton:@"OK",nil];
     }
 }
 
@@ -116,12 +138,13 @@
     //NSMutableData *data = [[NSMutableData alloc] init];
     //[data setValue:userNameAndPassWord forKey:@"uAndP"];
     [request setHTTPBody:postData];
+    NSData * returnData = [[NSData alloc] init];
+   
+        returnData = [NSURLConnection sendSynchronousRequest:request
+                                           returningResponse:&response
+                                                       error:&error];
     
-    NSData * returnData = [NSURLConnection sendSynchronousRequest:request
-                                          returningResponse:&response
-                                                      error:&error];
-    
-    NSString *string = [[NSString alloc] initWithData:returnData encoding:NSUTF8StringEncoding];
+       NSString *string = [[NSString alloc] initWithData:returnData encoding:NSUTF8StringEncoding];
     NSLog(@"error is %@",error);
     if(error == nil){
     
@@ -145,6 +168,37 @@
     
 }
 
+//弹出提示框
+-(void) showAlertWithTitle:(NSString *) title Message:(NSString *)message CancelButton:(NSString *)cancelButton OtherButton:(NSString *) otherButton, ...
+{
+    UIAlertView *alerView = [[UIAlertView alloc] initWithTitle:title
+                                                       message:message
+                                                      delegate:self
+                                             cancelButtonTitle:cancelButton
+                                             otherButtonTitles:otherButton, nil];
+    [alerView show];
+
+}
+#pragma mark -----实现协议方法--------
+-(void) userService:(UserService *)userService ParametersError:(ErrorType)errorType
+{
+    switch (errorType) {
+        case NullUserNameError:
+        case NullPasswordError:
+            [self showAlertWithTitle:@"提示" Message:@"用户名或密码不能为空" CancelButton:nil OtherButton:@"OK",nil];
+            break;
+        case UserNameError:
+            [self showAlertWithTitle:@"提示" Message:@"用户名必须是11位手机号" CancelButton:nil OtherButton:@"OK",nil];
+            break;
+        case PasswordError:
+            [self showAlertWithTitle:@"提示" Message:@"密码不能包含特殊字符" CancelButton:nil OtherButton:@"OK",nil];
+            break;
+            
+        default:
+            break;
+    }
+    
+}
 
 
 

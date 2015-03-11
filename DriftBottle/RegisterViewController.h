@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "UserService.h"
+#import "ASIFormDataRequest.h"
 
-@interface RegisterViewController : UIViewController
+@interface RegisterViewController : UIViewController <UserServiceDelegate>
+
+@property (nonatomic, strong) UserService *userService;
 
 @end
