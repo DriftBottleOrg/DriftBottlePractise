@@ -80,7 +80,7 @@
                 [request startAsynchronous];
             }
             @catch (NSException *exception) {
-                [self showAlertWithTitle:@"提示" Message:@"注册失败，请稍后再试" CancelButton:nil OtherButton:@"OK",nil];
+                [self showAlertWithTitle:@"Tips" Message:@"failed to register, please try again later." CancelButton:nil OtherButton:@"OK",nil];
             }
             
             
@@ -91,7 +91,7 @@
             }];
             
             [request setFailedBlock:^{
-                [self showAlertWithTitle:@"提示" Message:@"注册失败，请稍后再试" CancelButton:nil OtherButton:@"OK",nil];
+                [self showAlertWithTitle:@"Tips" Message:@"failed to register, please try again later." CancelButton:nil OtherButton:@"OK",nil];
                 NSError *error = [request error];
                 NSLog(@"%@",[error localizedDescription]);
                 return;
@@ -114,7 +114,7 @@
     {
        
         //如果输入两次密码不等，弹出提示框
-        [self showAlertWithTitle:nil Message:@"两次输入密码不相同" CancelButton:nil OtherButton:@"OK",nil];
+        [self showAlertWithTitle:nil Message:@"the input password must be the same as above" CancelButton:nil OtherButton:@"OK",nil];
     }
 }
 
@@ -185,13 +185,13 @@
     switch (errorType) {
         case NullUserNameError:
         case NullPasswordError:
-            [self showAlertWithTitle:@"提示" Message:@"用户名或密码不能为空" CancelButton:nil OtherButton:@"OK",nil];
+            [self showAlertWithTitle:@"Tips" Message:@"The user name or password can't be empty." CancelButton:nil OtherButton:@"OK",nil];
             break;
         case UserNameError:
-            [self showAlertWithTitle:@"提示" Message:@"用户名必须是11位手机号" CancelButton:nil OtherButton:@"OK",nil];
+            [self showAlertWithTitle:@"Tips" Message:@"Username must be mobile phone number." CancelButton:nil OtherButton:@"OK",nil];
             break;
         case PasswordError:
-            [self showAlertWithTitle:@"提示" Message:@"密码不能包含特殊字符" CancelButton:nil OtherButton:@"OK",nil];
+            [self showAlertWithTitle:@"Tips" Message:@"Your password can't contain special characters." CancelButton:nil OtherButton:@"OK",nil];
             break;
             
         default:

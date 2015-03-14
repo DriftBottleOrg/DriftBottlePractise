@@ -9,13 +9,15 @@
 #import "LoginViewController.h"
 #import "RegisterViewController.h"
 
+#define URL_LOGIN @"http://211.86.153.234:8080/driftBottle/Friends/myresource/loginUser"
+
 @interface LoginViewController ()
 
 @property (strong, nonatomic)RegisterViewController *registerViewControler;
 @end
 
 @implementation LoginViewController
-@synthesize userName,passWord,fishViewController,tabBarViewController;
+@synthesize userName,passWord,fishViewController,tabBarViewController,userService;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -60,9 +62,17 @@
 - (IBAction)click:(id)sender {
     //[self httpSynchronousRequest];
     
-    NSString *_userName = self.userName.text;
-    NSString *_passWord = self.passWord.text;
-    [self compare:_userName and:_passWord];
+    NSString *userName = self.userName.text;
+    NSString *passWord = self.passWord.text;
+    if([userService verifyName:userName andPassword:passWord])
+    {
+        
+    }
+    else
+    {
+        [self showAlertWithTitle:@"Tips" Message:@"The user name or password is not in the correct format." CancelButton:nil OtherButton:@"OK",nil];
+    }
+    
     
     
 }
@@ -133,5 +143,39 @@
         NSLog(@"string is %@",string);
         // 处理数据
     }
+}
+
+
+//弹出提示框
+-(void) showAlertWithTitle:(NSString *) title Message:(NSString *)message CancelButton:(NSString *)cancelButton OtherButton:(NSString *) otherButton, ...
+{
+    UIAlertView *alerView = [[UIAlertView alloc] initWithTitle:title
+                                                       message:message
+                                                      delegate:self
+                                             cancelButtonTitle:cancelButton
+                                             otherButtonTitles:otherButton, nil];
+    [alerView show];
+    
+}
+
+#pragma mark -----实现协议方法--------
+-(void) userService:(UserService *)userService ParametersError:(ErrorType)errorType
+{
+    switch (errorType) {
+        case NullUserNameError:
+        case NullPasswordError:
+            [self showAlertWithTitle:@"Tips" Message:@"The user name or password can't be empty." CancelButton:nil OtherButton:@"OK",nil];
+            break;
+        case UserNameError:
+            [self showAlertWithTitle:@"Tips" Message:@"Username must be mobile phone number." CancelButton:nil OtherButton:@"OK",nil];
+            break;
+        case PasswordError:
+            [self showAlertWithTitle:@"Tips" Message:@"Your password can't contain special characters." CancelButton:nil OtherButton:@"OK",nil];
+            break;
+            
+        default:
+            break;
+    }
+    
 }
 @end

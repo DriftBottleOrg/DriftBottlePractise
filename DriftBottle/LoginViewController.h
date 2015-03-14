@@ -9,12 +9,13 @@
 #import <UIKit/UIKit.h>
 #import "FishViewController.h"
 #import "TabBarViewController.h"
+#import "UserService.h"
 
-@interface LoginViewController : UIViewController
+@interface LoginViewController : UIViewController<UserServiceDelegate>
 
 @property (strong, nonatomic) IBOutlet UITextField *userName;
 @property (strong, nonatomic) IBOutlet UITextField *passWord;
-
+@property (nonatomic, strong) UserService *userService;
 
 @property (strong, nonatomic) FishViewController *fishViewController;
 @property (strong, nonatomic) TabBarViewController *tabBarViewController;
