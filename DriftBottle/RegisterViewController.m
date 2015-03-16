@@ -9,7 +9,7 @@
 #import "RegisterViewController.h"
 #import "TabBarViewController.h"
 #import "LogInformation.h"
-#define URL_REGISTER @"http://192.168.0.108:8080/driftBottle/Friends/myresource/registUser"
+#define URL_REGISTER @"http://192.168.0.107:8080/driftBottle/Friends/myresource/registUser"
 
 @interface RegisterViewController ()
 
@@ -86,10 +86,16 @@
             
             [request setCompletionBlock:^{
                 NSString *responseStr = [request responseString];
+                if([responseStr isEqual:@""])
+                {
+                    [self showAlertWithTitle:@"Tips" Message:@"the user name has been used already, please replace with other user name." CancelButton:nil OtherButton:@"OK",nil];
+                    return;
+                }
                 NSLog(@"%@",responseStr);// return UserId
                 [self goToTabBarViewController];
             }];
-            
+            NSError * err = [request error];
+            NSLog(@"error:%@",err.localizedDescription);
             [request setFailedBlock:^{
                 [self showAlertWithTitle:@"Tips" Message:@"failed to register, please try again later." CancelButton:nil OtherButton:@"OK",nil];
                 NSError *error = [request error];

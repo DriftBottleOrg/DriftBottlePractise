@@ -21,4 +21,6 @@
 @property (strong, nonatomic) TabBarViewController *tabBarViewController;
 
 - (IBAction)click:(id)sender;
+-(NSDictionary *) GetLoginDicWithUsername:(NSString *) userName password:(NSString *) password;
+
 @end

@@ -9,16 +9,22 @@
 #import "LoginViewController.h"
 #import "RegisterViewController.h"
 
-#define URL_LOGIN @"http://211.86.153.234:8080/driftBottle/Friends/myresource/loginUser"
+#define URL_LOGIN @"http://192.168.0.107:8080/driftBottle/Friends/myresource/loginUser"
 
 @interface LoginViewController ()
+
 
 @property (strong, nonatomic)RegisterViewController *registerViewControler;
 @end
 
 @implementation LoginViewController
-@synthesize userName,passWord,fishViewController,tabBarViewController,userService;
-
+@synthesize userName,passWord,fishViewController,tabBarViewController;
+-(UserService *) userService{
+    if(!_userService){
+        _userService = [[UserService alloc] init];
+    }
+    return _userService;
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     NSLog(@"LoginViewController");
@@ -59,14 +65,54 @@
     
 }
 
+-(NSDictionary *) GetLoginDicWithUsername:(NSString *) _userName password:(NSString *) _password
+{
+    NSMutableDictionary *dic = [NSMutableDictionary dictionary ];
+    [dic setValue:_userName forKey:@"userName"];
+    [dic setValue:_password forKey:@"passwd"];
+    return [NSDictionary dictionaryWithDictionary:dic];
+}
+
 - (IBAction)click:(id)sender {
     //[self httpSynchronousRequest];
     
-    NSString *userName = self.userName.text;
-    NSString *passWord = self.passWord.text;
-    if([userService verifyName:userName andPassword:passWord])
+    NSString *_userName = self.userName.text;
+    NSString *_passWord = self.passWord.text;
+    self.userService.delegate = self;
+    if([self.userService verifyName:_userName andPassword:_passWord])
     {
+        //NSDictionary *userDic = [self GetLoginDicWithUsername:_userName password:_passWord];
+        NSURL *url = [NSURL URLWithString:URL_LOGIN];
+        __weak  ASIFormDataRequest *request = [ASIFormDataRequest requestWithURL:url];
         
+        [request setPostValue:_userName forKey:@"userName"];
+        [request setPostValue:_passWord forKey:@"passwd"];
+        
+        [request setRequestMethod:@"POST"];
+        [request setTimeOutSeconds:20];
+        
+        request.delegate = self;
+        request.tag = 100;
+        @try {
+            [request startAsynchronous];
+        }
+        @catch (NSException *exception) {
+            [self showAlertWithTitle:@"Tips" Message:@"failed to login, please try again later." CancelButton:nil OtherButton:@"OK",nil];
+        }
+        
+        
+        [request setCompletionBlock:^{
+            NSString *responseStr = [request responseString];
+            NSLog(@"%@",responseStr);// return UserId
+            [self goToTabBarViewController];
+        }];
+        
+        [request setFailedBlock:^{
+            [self showAlertWithTitle:@"Tips" Message:@"failed to login, please try again later." CancelButton:nil OtherButton:@"OK",nil];
+            NSError *error = [request error];
+            NSLog(@"%@",[error localizedDescription]);
+            return;
+        }];
     }
     else
     {
