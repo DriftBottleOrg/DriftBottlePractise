@@ -9,7 +9,7 @@
 #import "LoginViewController.h"
 #import "RegisterViewController.h"
 
-#define URL_LOGIN @"http://192.168.0.107:8080/driftBottle/Friends/myresource/loginUser"
+#define URL_LOGIN @"http://211.86.153.234:80/driftBottle/Friends/myresource/loginUser"
 
 @interface LoginViewController ()
 
@@ -65,13 +65,7 @@
     
 }
 
--(NSDictionary *) GetLoginDicWithUsername:(NSString *) _userName password:(NSString *) _password
-{
-    NSMutableDictionary *dic = [NSMutableDictionary dictionary ];
-    [dic setValue:_userName forKey:@"userName"];
-    [dic setValue:_password forKey:@"passwd"];
-    return [NSDictionary dictionaryWithDictionary:dic];
-}
+
 
 - (IBAction)click:(id)sender {
     //[self httpSynchronousRequest];
@@ -103,14 +97,15 @@
         
         [request setCompletionBlock:^{
             NSString *responseStr = [request responseString];
-            NSLog(@"%@",responseStr);// return UserId
-            [self goToTabBarViewController];
+            NSLog(@"response:%@",responseStr);// return UserId
+           // [self goToTabBarViewController];
         }];
-        
+        NSError * err = [request error];
+        NSLog(@"error:%@, response:%@",[err localizedDescription],[request responseString]);
         [request setFailedBlock:^{
             [self showAlertWithTitle:@"Tips" Message:@"failed to login, please try again later." CancelButton:nil OtherButton:@"OK",nil];
             NSError *error = [request error];
-            NSLog(@"%@",[error localizedDescription]);
+            NSLog(@"fail:%@",[error localizedDescription]);
             return;
         }];
     }

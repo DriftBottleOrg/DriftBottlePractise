@@ -10,4 +10,5 @@
 
 @interface ThrowViewController : UIViewController
 
+-(NSDictionary *) GetBottleDicWithUserId:(NSString *) userId bottleType:(NSString *) bottleType messageText:(NSString *) message;
 @end
